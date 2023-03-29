@@ -1,8 +1,10 @@
-export default function Slide6({ slideContainerCSS }) {
+export default function Slide6({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
-			<h1>Slide 6: Development Costs and Hiring Developers</h1>
-			<div className="d-flex flex-column h-100 justify-content-center">
+			<h1 className={h1CSS}>
+				Slide 6: Development Costs and Hiring Developers
+			</h1>
+			<div className={slideContainerCSS}>
 				<p>
 					When it comes to development costs and hiring developers, here&apos;s
 					what you need to know:

@@ -1,9 +1,9 @@
-export default function Slide5({ slideContainerCSS }) {
+export default function Slide5({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
-			<h1>Slide 5: Vue.js/Nuxt.js</h1>
+			<h1 className={h1CSS}>Slide 5: Vue.js/Nuxt.js</h1>
 
-			<div className="d-flex flex-column h-100 justify-content-center">
+			<div className={slideContainerCSS}>
 				<p>
 					Vue.js is a modern JavaScript framework for building user interfaces
 					on the web.

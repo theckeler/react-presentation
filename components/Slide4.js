@@ -1,9 +1,11 @@
-export default function Slide4({ slideContainerCSS }) {
+export default function Slide4({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
-			<h1>Slide 4: Who Uses React w/ Salesforce Commerce Cloud?</h1>
+			<h1 className={h1CSS}>
+				Slide 4: Who Uses React w/ Salesforce Commerce Cloud?
+			</h1>
 
-			<div className="d-flex flex-column h-100 justify-content-center">
+			<div className={slideContainerCSS}>
 				<p>
 					React.js is also used with Salesforce Commerce Cloud by companies such
 					as:

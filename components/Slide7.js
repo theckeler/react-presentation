@@ -1,8 +1,8 @@
-export default function Slide7({ slideContainerCSS }) {
+export default function Slide7({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
-			<h1>Slide 7: Conclusion</h1>
-			<div className="d-flex flex-column h-100 justify-content-center">
+			<h1 className={h1CSS}>Slide 7: Conclusion</h1>
+			<div className={slideContainerCSS}>
 				<p>
 					Headless architecture and JavaScript frameworks like React.js/Next.js
 					and Vue.js/Nuxt.js offer many benefits for businesses looking to

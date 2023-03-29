@@ -54,6 +54,9 @@ export default function Home() {
 		}
 	};
 
+	const slideContainerCSS = "d-flex flex-column h-100 justify-content-center";
+	const h1CSS = "text-uppercase";
+
 	return (
 		<>
 			<Head>
@@ -86,7 +89,7 @@ export default function Home() {
 					<div
 						className="container h-100 d-flex flex-column justify-content-stretch p-5 position-relative"
 						style={{ background: "rgba(255,255,255,0.85)", zIndex: 1 }}>
-						<CurrentSlide />
+						<CurrentSlide {...{ slideContainerCSS, h1CSS }} />
 					</div>
 				</main>
 

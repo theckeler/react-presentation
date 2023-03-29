@@ -1,8 +1,8 @@
-export default function Slide2({ slideContainerCSS }) {
+export default function Slide2({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
-			<h1>Slide 2: React.js/Next.js</h1>
-			<div className="d-flex flex-column h-100 justify-content-center">
+			<h1 className={h1CSS}>Slide 2: React.js/Next.js</h1>
+			<div className={slideContainerCSS}>
 				<p>
 					React.js is a popular JavaScript framework for developing web
 					applications.

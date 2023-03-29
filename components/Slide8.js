@@ -1,8 +1,8 @@
-export default function Slide7({ slideContainerCSS }) {
+export default function Slide7({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
-			<h1>Thanks for viewing this slideshow!</h1>
-			<div className="d-flex flex-column h-100 justify-content-center">
+			<h1 className={h1CSS}>Thanks for viewing this slideshow!</h1>
+			<div className={slideContainerCSS}>
 				<p>
 					This slideshow was created using React.js, one of the most popular
 					front-end frameworks for building web applications. We hope you found
