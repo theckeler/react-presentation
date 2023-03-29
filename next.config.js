@@ -5,7 +5,7 @@ const nextConfig = {
 		remotePatterns: [
 			{
 				protocol: "https",
-				hostname: "static.wikia.nocookie.net",
+				hostname: "*",
 				port: "",
 				pathname: "/**",
 			},

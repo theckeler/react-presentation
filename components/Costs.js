@@ -1,8 +1,8 @@
-export default function Slide6({ slideContainerCSS, h1CSS }) {
+export default function Costs({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
 			<h1 className={h1CSS}>
-				Slide 6: Development Costs and Hiring Developers
+				Development Costs and Hiring Developers
 			</h1>
 			<div className={slideContainerCSS}>
 				<p>

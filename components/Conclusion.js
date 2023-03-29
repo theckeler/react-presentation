@@ -1,7 +1,7 @@
-export default function Slide7({ slideContainerCSS, h1CSS }) {
+export default function Conclusion({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
-			<h1 className={h1CSS}>Slide 7: Conclusion</h1>
+			<h1 className={h1CSS}>Conclusion</h1>
 			<div className={slideContainerCSS}>
 				<p>
 					Headless architecture and JavaScript frameworks like React.js/Next.js

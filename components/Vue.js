@@ -1,7 +1,7 @@
-export default function Slide5({ slideContainerCSS, h1CSS }) {
+export default function Vue({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
-			<h1 className={h1CSS}>Slide 5: Vue.js/Nuxt.js</h1>
+			<h1 className={h1CSS}>Exploring Vue.js/Nuxt.js</h1>
 
 			<div className={slideContainerCSS}>
 				<p>

@@ -1,7 +1,7 @@
-export default function Slide1({ slideContainerCSS, h1CSS }) {
+export default function Headless({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
-			<h1 className={h1CSS}>Slide 1: New Tech - Headless</h1>
+			<h1 className={h1CSS}>New Tech - Headless</h1>
 			<div className={slideContainerCSS}>
 				<p>
 					Headless websites are a type of web architecture that separates the

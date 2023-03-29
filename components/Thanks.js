@@ -1,4 +1,4 @@
-export default function Slide7({ slideContainerCSS, h1CSS }) {
+export default function Thanks({ slideContainerCSS, h1CSS }) {
 	return (
 		<>
 			<h1 className={h1CSS}>Thanks for viewing this slideshow!</h1>
