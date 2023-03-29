@@ -92,7 +92,7 @@ export default function Home() {
 					</div> */}
 				</main>
 
-				<nav className="" style={{ background: "#47a1e6" }}>
+				<nav className="p-2" style={{ background: "#47a1e6" }}>
 					<ul className="container d-flex list-unstyled mb-0">
 						<li className="">
 							<Button whichWay={prevSlide} copy="«" />
