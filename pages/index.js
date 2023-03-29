@@ -11,44 +11,43 @@ import Slide4 from "../components/Slide4";
 import Slide5 from "../components/Slide5";
 import Slide6 from "../components/Slide6";
 import Slide7 from "../components/Slide7";
+import Slide8 from "../components/Slide8";
 import Button from "../components/Button";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-	const slideCSS = "w-100 vh-100 min-vh-100 d-flex align-items-center p-4";
-	const slideContainerCSS = "w-100 p-4";
+	const slideCSS =
+		"d-flex flex-column justify-content-stretch vw-100 vh-100 min-vw-100 min-vh-100";
 
-	const [currentNum, setCurrentNum] = useState(1);
-	const slides = {
-		slide1: Slide1,
-		slide2: Slide2,
-		slide3: Slide3,
-		slide4: Slide4,
-		slide5: Slide5,
-		slide6: Slide6,
-		slide7: Slide7,
-	};
+	const [currentNum, setCurrentNum] = useState(0);
+	const slides = [
+		Slide1,
+		Slide2,
+		Slide3,
+		Slide4,
+		Slide5,
+		Slide6,
+		Slide7,
+		Slide8,
+	];
 
-	let CurrentSlide = slides[`slide${currentNum}`];
-	//console.log("CurrentSlide: ", CurrentSlide);
+	let CurrentSlide = slides[currentNum];
 
 	const prevSlide = () => {
-		if (currentNum > 1) {
+		if (currentNum >= 1) {
 			setCurrentNum(currentNum - 1);
 		}
 	};
 
 	const nextSlide = () => {
-		if (currentNum < 7) {
+		if (currentNum < slides.length - 1) {
 			setCurrentNum(currentNum + 1);
 		}
 	};
 
 	const handleKeyPress = (e) => {
-		console.log("charCode: ", e.key);
 		if (e.key === "ArrowRight") {
-			console.log("enter press here! ");
 			nextSlide();
 		} else if (e.key === "ArrowLeft") {
 			prevSlide();
@@ -68,28 +67,27 @@ export default function Home() {
 				onKeyDown={handleKeyPress}
 				tabIndex="0">
 				<main
-					className="flex-grow-1 overflow-hidden"
+					className="flex-grow-1 overflow-hidden position-relative"
 					style={{ background: "#bbf272" }}>
 					<div
-						className="container"
-						//style={{ top: `-${currentTop}px`, left: 0 }}
-						style={{ top: 0, left: 0, background: "rgba(255,255,255,0.7)" }}>
-						<ul className="d-flex flex-column list-unstyled mb-0">
-							<li className={slideCSS}>
-								<CurrentSlide {...{ slideContainerCSS }} />
+						className="position-absolute overflow-hidden"
+						style={{ top: 0, left: 0, zIndex: 0 }}>
+						<ul className="d-flex flex-column list-unstyled mb-0 list-unstyled">
+							<li className="position-relative vw-100 vh-100">
+								<Image
+									src="https://static.wikia.nocookie.net/harrypotter/images/b/b6/Nick_in_Great_Hall.jpg"
+									alt=""
+									fill
+									style={{ objectFit: "cover" }}
+								/>
 							</li>
 						</ul>
 					</div>
-					{/* <div
-						className="position-absolute"
-						//style={{ top: `-${currentTop}px`, left: 0 }}
-						style={{ top: 0, left: 0, background: "rgba(255,255,255,0.7)" }}>
-						<ul className="d-flex flex-column list-unstyled mb-0">
-							<li className={slideCSS}>
-								<CurrentSlide {...{ slideContainerCSS }} />
-							</li>
-						</ul>
-					</div> */}
+					<div
+						className="container h-100 d-flex flex-column justify-content-stretch p-5 position-relative"
+						style={{ background: "rgba(255,255,255,0.85)", zIndex: 1 }}>
+						<CurrentSlide />
+					</div>
 				</main>
 
 				<nav className="p-2" style={{ background: "#47a1e6" }}>

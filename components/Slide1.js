@@ -1,8 +1,8 @@
 export default function Slide1({ slideContainerCSS }) {
 	return (
-		<div className={slideContainerCSS}>
+		<>
 			<h1>Slide 1: New Tech - Headless</h1>
-			<div id="content">
+			<div className="d-flex flex-column h-100 justify-content-center">
 				<p>
 					Headless websites are a type of web architecture that separates the
 					front-end (the part of the website that users see and interact with)
@@ -27,6 +27,6 @@ export default function Slide1({ slideContainerCSS }) {
 					<li>More cost-effective in the long run</li>
 				</ul>
 			</div>
-		</div>
+		</>
 	);
 }
